@@ -1,0 +1,37 @@
+create database bdjava;
+use bdjava;
+
+create table colecoes (
+	id int primary key not null auto_increment,
+    nome varchar(50)
+);
+insert into colecoes(nome) values ("super Nintendo");
+insert into colecoes(nome) values ("game boy");
+insert into colecoes(nome) values("Mega Drive");
+
+create table jogos (
+	id int primary key not null auto_increment,
+    nome varchar(50),
+    lancamento Integer,
+    estadoConcerv varchar(50),
+	console varchar(50)
+);
+
+
+insert into jogos(nome,lancamento,estadoConcerv,console) values("Mario kart", 1992, "novo","super Nintendo");
+insert into jogos(nome,lancamento,estadoConcerv,console) values("Super mario World", 1990, "ruim","super Nintendo");
+insert into jogos(nome,lancamento,estadoConcerv,console) values("Pokemon Red", 1997, "ruim","game boy");
+
+
+
+create table acessorios (
+	id int primary key not null auto_increment,
+    nome varchar(50),
+    lancamento Integer,
+    tipo varchar(50),
+	console varchar(50)
+);
+
+insert into acessorios(nome,lancamento,tipo,console) values("Turbo Controler", 1990, "controle","super Nintendo");
+insert into acessorios(nome,lancamento,tipo,console) values("multTap" ,1993,"Periferico","super Nintendo");
+insert into acessorios(nome,lancamento,tipo,console) values("linkCable" ,1988,"Periferico","game boy");
